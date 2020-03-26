@@ -1,0 +1,12 @@
+{
+    "name": "bxd/bxd-db",
+    "description": "The db for davdian",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Bxd\\Db\\": "src/",
+        }
+    }
+}

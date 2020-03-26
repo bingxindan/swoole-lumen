@@ -1,0 +1,44 @@
+{
+    "name": "laravel/lumen",
+    "description": "The Laravel Lumen Framework.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/lumen-framework": "5.3.*",
+        "vlucas/phpdotenv": "~2.2",
+        "bschmitt/laravel-amqp": "1.*",
+        "mongodb/mongodb": "^1.1",
+        "simplesoftwareio/simple-qrcode": "^1.5",
+        "intervention/image": "^2.3",
+        "aliyuncs/oss-sdk-php": "^2.2",
+        "ixudra/curl": "^6.11",
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gateway\\Demo\\": "gateways/demo/",
+            "Bxd\\Syscall\\": "packages/bxd/syscall/src",
+            "Bxd\\BxdRedis\\": "packages/bxd/bxdredis/src",
+            "Bxd\\Db\\": "packages/bxd/db/src",
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "database/"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
